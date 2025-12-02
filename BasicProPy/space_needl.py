@@ -1,4 +1,4 @@
-SIZE = 2
+SIZE = 6
 
 def main():
     spear()

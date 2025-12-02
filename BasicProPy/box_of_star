@@ -1,0 +1,11 @@
+def box_of_stars(column, row):
+    print('*' * column)
+    for i in range(1, row-1):
+        print('*', end='')
+        for space in range(1, column-1):
+            print(' ', end='')
+        print('*')
+    print('*' * column)
+
+
+box_of_stars(8, 5)

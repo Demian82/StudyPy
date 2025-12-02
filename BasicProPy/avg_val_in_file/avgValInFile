@@ -1,0 +1,21 @@
+def average_value_in_file(fileName):
+    sum = 0
+    count = 0
+    with open(fileName, 'r') as f:
+        for line in f:
+            l = line.strip()
+
+            num = float(l)
+            sum += num
+            count += 1
+    
+    if count == 0:
+        return 0.0
+    else:
+        return sum / count
+
+def main():
+    avg = average_value_in_file("input.txt")
+    print(avg)
+
+main()
