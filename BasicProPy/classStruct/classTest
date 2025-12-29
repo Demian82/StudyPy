@@ -1,0 +1,38 @@
+class Rectangle:
+    
+    def __init__(self, x: int, y: int, w: int, h: int):
+        if w >= 0 and h >= 0:
+            self._x = x
+            self._y = y
+            self._width = w
+            self._height = h
+
+    @property
+    def x(self) -> int:
+        return self._x
+
+    @property
+    def y(self) -> int:
+        return self._y
+
+    @property
+    def width(self) -> int:
+        return self._width
+
+    @property
+    def height(self) -> int:
+        return self._height
+
+    def __str__(self) -> str:
+        return (f"Rectangle[x={self.x}, y={self.y}, "
+                f"width={self.width}, height={self.height}]")
+
+
+    def __eq__(self, other: object) -> bool:
+        if not isinstance(other, Rectangle):
+            return False
+        
+        return (self.x == other.x and
+                self.y == other.y and
+                self.width == other.width and
+                self.height == other.height)
